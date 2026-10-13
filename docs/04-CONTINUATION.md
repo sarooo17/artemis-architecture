@@ -11,13 +11,15 @@ Not all these steps require the same kind of intelligence.
 Artemis vNext frames continuation around a small set of conceptual operations:
 
 - **Compute:** perform a calculation, bounded semantic decision, or deeper reasoning.
-- **Act:** interact with an authorized system.
+- **Action:** interact with an authorized system.
 - **Verify:** inspect whether a condition or effect actually holds.
 - **Delegate:** hand independent work to a separate durable unit where justified.
-- **Ask / Wait:** pause for human input or a future condition.
-- **Complete / Fail:** reach an explicit terminal outcome.
+- **AskUser:** request the information or human decision required by the task.
+- **Wait:** persist a future condition while work is dormant.
+- **Complete:** finish when the requested result is verified.
+- **Fail:** record a terminal failure or unresolved outcome.
 
-This is a public *semantic description*, not an executable contract.
+This is a public *semantic description*, not an executable contract. Deterministic work, bounded decisions, open reasoning and sandbox compute are modes of Compute, not separate durable task states.
 
 ## Multi-agent without agent proliferation
 
