@@ -10,6 +10,14 @@ Many business applications are organized around entities and modules. Real reque
 
 That request is neither a single page nor a single database table. Artemis explores an experience in which an intent can lead to the right information, a targeted interface, and an appropriate action boundary.
 
+## One Workspace, one conversation, many surfaces
+
+A central vNext principle is **one global conversation per Workspace**. Opening a new table, dashboard, entity or document changes the active work focus—it does not create another conversational silo.
+
+The active surface may contribute relevant context, while an explicit user request can refer to something else. The system should resolve which work or entity is being addressed instead of tying every question to the visible tab.
+
+[Read the full Workspace and dynamic-context note](00-ONE-WORKSPACE.md).
+
 ## Conversation is one surface, not the whole product
 
 The direction combines:

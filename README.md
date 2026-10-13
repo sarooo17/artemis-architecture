@@ -5,6 +5,8 @@
 
 Most agent demonstrations end when the model responds. Business work often does not.
 
+**An essential design choice:** one persistent Workspace should let people navigate different work surfaces without having to create separate chat silos. Context is assembled dynamically from the current intent, focus, authorized sources and task state; the global conversation is not the model's entire context. [Explore the Workspace model](docs/00-ONE-WORKSPACE.md).
+
 > **Intent in. Interface out. Action done.**
 
 This repository is a **public technical reading room**, not the Artemis source code, SDK, deployment guide, or complete engineering specification. It explains selected architectural ideas, the tensions behind them, and the boundaries they are meant to preserve.
@@ -15,6 +17,7 @@ This repository is a **public technical reading room**, not the Artemis source c
 
 | Common agent assumption | Artemis design direction |
 | --- | --- |
+| Every project lives in its own chat | **One Workspace and global conversation**, with focus and context changing as work changes |
 | The conversation is the unit of work | A durable **Execution** owns work; conversation is an interaction channel |
 | An agent receives a long list of tools | A compact capability surface discovers task-relevant, permitted operations |
 | An LLM keeps checking until something changes | **Event Intelligence** expresses future conditions and wakes dormant work |
@@ -48,16 +51,24 @@ flowchart TB
 
 ## Read the design notes
 
-1. **[Why work needs more than a chat loop](docs/01-WORK-AS-THE-PRIMITIVE.md)** — conversation, Execution, Case, and the distinction between user interaction and task ownership.
-2. **[A compact capability fabric](docs/02-CAPABILITY-FABRIC.md)** — semantic capabilities, narrow discovery surfaces, dynamic access, and protocol-independent operations.
-3. **[Event Intelligence and dormant work](docs/03-EVENT-INTELLIGENCE.md)** — temporal conditions, correlation, wake/resume, and why a model should not spend compute waiting.
-4. **[Continuation rather than endless prompting](docs/04-CONTINUATION.md)** — multiple types of work, delegation, external dependencies, and verified termination.
-5. **[Adaptive cognition](docs/05-ADAPTIVE-COGNITION.md)** — when to compute, decide, reason, escalate, or ask.
-6. **[Context, memory, and trust](docs/06-CONTEXT-AND-TRUST.md)** — task-specific context with evidence, provenance, and separate authority.
-7. **[Governed action and verifiable outcomes](docs/07-AUTHORITY-AND-VERIFICATION.md)** — why an authorized action and a correct answer are different things.
-8. **[Interfaces shaped by work](docs/08-EXPERIENCE.md)** — work surfaces, artifacts, attention, and intent-driven UI.
-9. **[One end-to-end example](docs/09-EXAMPLE.md)** — a hypothetical business exception spanning tools, time, and human decisions.
-10. **[Status and disclosure scope](docs/STATUS.md)** — what is implemented, what is a target, and what stays private.
+Start with **[The architectural signatures](docs/DESIGN-PRINCIPLES.md)** for the complete map, or read the chapters in order.
+
+1. **[One Workspace, changing context](docs/00-ONE-WORKSPACE.md)** — a single global conversation, independent surfaces and a task-specific context that follows the user's work.
+2. **[Why work needs more than a chat loop](docs/01-WORK-AS-THE-PRIMITIVE.md)** — conversation, Execution, Case, and the distinction between user interaction and task ownership.
+3. **[A compact capability fabric](docs/02-CAPABILITY-FABRIC.md)** — semantic capabilities, narrow discovery surfaces, dynamic access, and protocol-independent operations.
+4. **[Event Intelligence and dormant work](docs/03-EVENT-INTELLIGENCE.md)** — temporal conditions, correlation, wake/resume, and why a model should not spend compute waiting.
+5. **[Continuation rather than endless prompting](docs/04-CONTINUATION.md)** — multiple types of work, delegation, external dependencies, and verified termination.
+6. **[Adaptive cognition](docs/05-ADAPTIVE-COGNITION.md)** — when to compute, decide, reason, escalate, or ask.
+7. **[Context, memory, and trust](docs/06-CONTEXT-AND-TRUST.md)** — task-specific context with evidence, provenance, and separate authority.
+8. **[Governed action and verifiable outcomes](docs/07-AUTHORITY-AND-VERIFICATION.md)** — why an authorized action and a correct answer are different things.
+9. **[Interfaces shaped by work](docs/08-EXPERIENCE.md)** — work surfaces, artifacts, attention, and intent-driven UI.
+10. **[One end-to-end example](docs/09-EXAMPLE.md)** — a hypothetical business exception spanning tools, time, and human decisions.
+11. **[Adaptive teams](docs/10-ADAPTIVE-TEAMS.md)** — how the smallest suitable worker/team can evolve when the task changes.
+12. **[Skills, knowledge and governed learning](docs/11-SKILLS-AND-LEARNING.md)** — capability versus expertise versus memory, and controlled reusable improvement.
+13. **[Cases and automations](docs/12-CASES-AND-AUTOMATION.md)** — long-lived business continuity beyond individual tasks.
+14. **[Operational explainability](docs/13-OPERATIONAL-EXPLAINABILITY.md)** — inspectable outcomes and evidence rather than reconstructed model reasoning.
+15. **[Reliable autonomy](docs/14-RELIABLE-AUTONOMY.md)** — differentiated compute, recoverability and responsiveness.
+16. **[Status and disclosure scope](docs/STATUS.md)** — what is implemented, what is a target, and what stays private.
 
 ## What Artemis is not
 

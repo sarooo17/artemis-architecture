@@ -10,6 +10,12 @@ The system should be able to reason across them without pretending they are equa
 
 For example, a supplier email may be useful evidence that banking details changed. It is not, by itself, authorization to update bank details in the ERP.
 
+## The same conversation can produce different contexts
+
+In the vNext direction there is no need to open a different chat every time the person switches business topics. The **global Workspace conversation** persists, while each operation receives a context projection based on intent, focus, references, evidence freshness and the purpose of that operation.
+
+The historical transcript is a retrievable source; it is **not** automatically the full context of the next model call. See [One Workspace, changing context](00-ONE-WORKSPACE.md).
+
 ## Context is task-shaped
 
 Artemis develops the idea of a task-specific **environment**: relevant information, accessible capabilities, allowed actions, computational resources, and resource limits, presented together for a particular operation.
