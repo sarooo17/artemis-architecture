@@ -28,6 +28,8 @@ Before diving into technical details, these notes explain the product thesis and
 
 Named competitor comparisons and performance rankings are intentionally omitted until common scenarios have been measured with reproducible evidence.
 
+**Terminology:** [Glossary of the main architectural concepts](docs/GLOSSARY.md) — how Workspace, Conversation, Execution, Surface, Case, Capability, Skill and Authority differ.
+
 ## The architectural shift
 
 | Common agent assumption | Artemis design direction |
