@@ -6,6 +6,10 @@ Artemis has a running product/demo architecture and a separate, accepted **vNext
 
 | Area | What can be said publicly |
 | --- | --- |
+| Front Desk / control-plane boundary | Current conversational and execution foundations exist; the target division between global interaction control and autonomous business work is vNext semantics. |
+| Multi-Execution UX / global attention | Work status and approval foundations exist; global concurrent work control and attention routing beyond a single chat are vNext targets. |
+| Task-scoped worker environment | Existing capability/context projection foundations; full per-assignment environment compilation and governed dynamic expansion remain vNext design work. |
+| Semantic business world | Canonical capability and protocol foundations exist. Interoperability beyond currently connected systems is a target, not a universal integration guarantee. |
 | Unified Workspace / global conversation | The current workspace includes chat and surface foundations, but the one-global-conversation architecture independent from tabs and Executions is a vNext goal, not an assertion about the present product. |
 | Artemis product/demo | Active implementation and demonstrations exist; this repository does not document supported product operations or production guarantees. |
 | Capabilities | Semantic capability abstraction, compact discovery/execution surface, and task-relevant access have implemented foundations. |

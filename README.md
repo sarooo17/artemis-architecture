@@ -17,13 +17,17 @@ This repository is a **public technical reading room**, not the Artemis source c
 
 | Common agent assumption | Artemis design direction |
 | --- | --- |
+| One chat assistant should execute every kind of request | A **Front Desk** handles interaction and supervision while durable Executions own substantive autonomous work |
+| Only one task can own the interface at a time | Multiple independent activities coexist, with global attention and controls |
 | Every project lives in its own chat | **One Workspace and global conversation**, with focus and context changing as work changes |
 | The conversation is the unit of work | A durable **Execution** owns work; conversation is an interaction channel |
+| An agent needs a fixed toolset and prompt | **Task-scoped environments** can adapt context, capability, compute and expertise with governed access |
 | An agent receives a long list of tools | A compact capability surface discovers task-relevant, permitted operations |
 | An LLM keeps checking until something changes | **Event Intelligence** expresses future conditions and wakes dormant work |
 | Every step should use open-ended reasoning | Deterministic operations, bounded decisions, and open reasoning have different roles |
 | The model's final message means success | Completion depends on **verification and evidence** |
 | A single agent or predefined team owns everything | Work can be decomposed and composed when independence actually justifies it |
+| A business task must know each provider-specific tool | Semantic work and capabilities can span existing systems without becoming another ERP |
 | A fixed UI is the only control surface | **Work surfaces** can be composed around user intent and durable results |
 
 These are design choices, not claims that Artemis invented the underlying concepts. The interesting part is how they fit together without transferring authority to a model.
@@ -68,7 +72,11 @@ Start with **[The architectural signatures](docs/DESIGN-PRINCIPLES.md)** for the
 13. **[Cases and automations](docs/12-CASES-AND-AUTOMATION.md)** — long-lived business continuity beyond individual tasks.
 14. **[Operational explainability](docs/13-OPERATIONAL-EXPLAINABILITY.md)** — inspectable outcomes and evidence rather than reconstructed model reasoning.
 15. **[Reliable autonomy](docs/14-RELIABLE-AUTONOMY.md)** — differentiated compute, recoverability and responsiveness.
-16. **[Status and disclosure scope](docs/STATUS.md)** — what is implemented, what is a target, and what stays private.
+16. **[Front Desk, interaction vs. execution](docs/15-FRONT-DESK.md)** — one entry point for understanding, starting, steering and supervising work.
+17. **[Concurrent work and attention](docs/16-MULTI-EXECUTION-ATTENTION.md)** — multiple Executions and a global place for approvals, results and blockers.
+18. **[Adaptive environments](docs/17-ADAPTIVE-ENVIRONMENTS.md)** — assemble context, capabilities and resources per assignment and handle gaps at their own layer.
+19. **[Semantic world and cross-system work](docs/18-SEMANTIC-WORLD.md)** — business intent over heterogeneous providers, with current systems remaining authoritative.
+20. **[Status and disclosure scope](docs/STATUS.md)** — what is implemented, what is a target, and what stays private.
 
 ## What Artemis is not
 

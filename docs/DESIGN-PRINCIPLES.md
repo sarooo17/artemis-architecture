@@ -4,8 +4,12 @@ This page is a short map of the ideas emphasized across the public notes. None i
 
 | Design signature | What changes for the user | Read more |
 | --- | --- | --- |
+| Front Desk as a control plane | One conversational entry point can inspect and steer work without being an all-tools business super-agent | [Front Desk](15-FRONT-DESK.md) |
+| Many Executions, global attention | Run independent work without trapping progress, decisions and approvals in separate chats | [Multi-Execution](16-MULTI-EXECUTION-ATTENTION.md) |
 | One Workspace, one global conversation, shifting context | Move between work without managing disconnected chats | [Workspace](00-ONE-WORKSPACE.md) |
 | Work is durable and independent of UI | Tasks may continue, wait and complete after the initiating message | [Execution](01-WORK-AS-THE-PRIMITIVE.md) |
+| Task-shaped, adaptable environments | Assemble the context, capability and compute appropriate to an assignment, with bounded escalation | [Environment](17-ADAPTIVE-ENVIRONMENTS.md) |
+| Cross-system semantic world | Express business meaning independent from any one tool API or ERP module | [World](18-SEMANTIC-WORLD.md) |
 | Compact capability access | Relevant permitted operations can be discovered without loading a giant tool catalog | [Capabilities](02-CAPABILITY-FABRIC.md) |
 | Event Intelligence | Future conditions wake dormant work without endless model polling | [Events](03-EVENT-INTELLIGENCE.md) |
 | Runtime-owned continuation | Known actions, compute, reasoning, waits and verification are distinct | [Continuation](04-CONTINUATION.md) |
