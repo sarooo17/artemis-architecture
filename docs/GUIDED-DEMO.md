@@ -20,7 +20,7 @@ Look for whether the experience helps you inspect relevant business records and 
 
 **Question to investigate:** If a task implies changing a business record, how does the system distinguish analysis from the right to act?
 
-Look for boundaries between viewing a result, proposing an action, obtaining appropriate authorization and verifying a consequential effect. **Do not assume that business writes are enabled in the demo.**
+Look for boundaries between viewing a result, proposing an action, obtaining appropriate authorization and verifying a consequential effect. **The current ERP-backed demonstration should be treated as read-oriented; do not assume that final ERP changes are enabled.**
 
 **Architecture behind the question:** [authority and verification](07-AUTHORITY-AND-VERIFICATION.md), [interaction vs. execution](15-FRONT-DESK.md).
 
