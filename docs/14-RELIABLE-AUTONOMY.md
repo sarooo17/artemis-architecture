@@ -10,6 +10,14 @@ An ordinary computation, a known safe retry, a structural validation and an exte
 
 Artemis's direction is to distinguish those operation types and reserve deeper cognition for uncertainty that actually requires it.
 
+## Resource budgets have scope
+
+A design for multiple simultaneous activities needs more than a global limit on model tokens. Budgets can apply across a workspace, an Execution and its delegated subwork, and the individual operations using models, tools or compute.
+
+The vNext direction is **hierarchical and multidimensional resource governance**: starting parallel tasks should not accidentally multiply unlimited spending, and retries or event storms should not bypass limits. Hard safety and resource boundaries are not negotiated by a model; within permitted choices, the system can still favor more or less expensive cognition as appropriate.
+
+An active task and a task that is merely waiting are not equivalent consumers of compute. Any budget policy must keep that distinction.
+
 ## Progress without busy waiting
 
 A long-lived Execution may be idle while waiting for a person or a future event. Waiting should preserve durable intent and dependencies rather than occupying a running agent loop.
