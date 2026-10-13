@@ -12,6 +12,10 @@ An uploaded document may contain imperative language. That does not make it a so
 
 Artemis treats permission, task delegation, user involvement, and operational checks as governed boundaries outside the model's confidence.
 
+## Describing an action is not performing it
+
+A capability may have a contract for preparing, executing or verifying an action without the corresponding operation being enabled in a particular environment. The current ERP-based demonstration should **not** be interpreted as providing unrestricted write access: the implemented ERP interface is primarily read-oriented, and a draft or preview is different from a committed change.
+
 ## The verification boundary
 
 Business operations are not complete when a tool call returns a friendly message. A consequential result may need to be confirmed against the system of record or an independent piece of evidence.
