@@ -24,6 +24,10 @@ The more ambitious unified Workspace, front-desk control plane, globally address
 
 The public EI package's capabilities must not be conflated with capabilities fully integrated or deployed in Artemis itself. Its own repository and license govern that project.
 
+## Capability contracts and product behavior
+
+A capability contract describing an operation is not proof that the operation is enabled end-to-end. For example, the current ERP-backed demonstration is primarily read-oriented; draft and preparation semantics must not be presented as committed business-system changes. Likewise, a feature in the separately published Event Intelligence library does not automatically establish complete integration with Artemis's future Execution model.
+
 ## Claims this repository does not make
 
 - That the complete vNext architecture is in production.
