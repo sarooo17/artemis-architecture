@@ -30,6 +30,16 @@ The direction combines:
 
 An interface element should not secretly become a new long-running agent task merely because it was clicked. Direct UI actions and autonomous work need different semantics.
 
+## Work Surfaces should behave like ordinary software
+
+In the vNext target, a Work Surface is a durable, interactive view of a business resource or artifact—not merely an LLM response rendered as a card. Opening a table, selecting a row, sorting, filling out a form and editing a draft do not inherently require an autonomous agent.
+
+The design distinguishes **local presentation**, **persistent surface state changes**, **bounded direct domain actions**, and **autonomous, multi-step Executions**. A permitted direct action can remain a normal software action even when it changes business state, with the appropriate authorization and verification. Conversely, a complex request that needs planning, retries or waiting may become a separate Execution.
+
+Both user-initiated and agent-initiated interactions should follow the corresponding action boundary. UI state and uncommitted drafts must not be confused with confirmed changes in the system of record.
+
+This is why Artemis's intended experience is **software interaction with optional autonomy**, not an agent invocation for every click.
+
 ## Generated UI is not unrestricted UI
 
 The generated experience still needs predictable interaction contracts, accessibility, clear ownership of data and state, and governed actions. A compelling dashboard is not proof that the underlying business record was changed.
