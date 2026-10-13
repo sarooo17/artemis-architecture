@@ -31,11 +31,23 @@ This avoids the assumption that everything an agent might need must be inserted 
 
 None should be silently substituted for another.
 
+## Provenance, trust and authority do not collapse into one score
+
+The target treats the origin of each item, how it was verified, its freshness, sensitivity and **what it may be used to justify** as different properties. A public article may be useful context without being an operational instruction. A user preference may be authoritative for presentation style but not for the current payment status of an invoice.
+
+Mixed-source reasoning can be legitimate: a task may combine current ERP observations, company reference documents and public research. Their boundaries must remain intact even after the system produces a summary. A higher-confidence model conclusion does not upgrade an unverified source into authoritative evidence.
+
 ## Provenance survives summarization
 
 A model-generated summary of an unverified document is not itself verified evidence. A current business record may outweigh an old remembered value for operational questions. A user preference has a different scope of authority from a company approval rule.
 
 The aim is to keep these relationships visible, even when a worker combines data from different sources in one reasoning step.
+
+## History, summaries and memory are different objects
+
+Conversation history records what was said or presented. Operational state records what the task or a surface is doing now. Memory holds reusable information under an explicit governance lifecycle. Summaries and compaction are derived retrieval aids—not automatically new facts or authoritative memory.
+
+A correction to a historical fact should not silently alter the system of record, and retaining a conversation transcript should not make every past message a permanent instruction.
 
 ## Memory should not silently become policy
 
