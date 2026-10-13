@@ -19,6 +19,14 @@ For example, accessing purchase orders is a capability; a supplier-onboarding pr
 
 One does not grant the powers of another. A document describing an approval process is not itself an approval. A memory of a past action is not current authority.
 
+## Skills and agents are not just prompt files
+
+A reusable Skill may combine instructions with templates, procedural steps, schemas or governed executable resources. For example, an invoice-reconciliation method might define both a workflow and how to validate its output. A Skill is narrower than an entire business domain; **finance** is a domain, while a repeatable three-way matching procedure is a Skill.
+
+An **Agent Blueprint** describes a reusable user- or company-scoped worker configuration. A **Worker Profile** is the task-specific environment assembled when actual work runs. A blueprint is not a permanently active process and cannot itself grant new business permissions.
+
+The architecture aims to let company-defined skills and agent configurations participate in the same governed composition process as system-provided ones. Lifecycle, access and evidence requirements still apply.
+
 ## On-demand rather than everything at startup
 
 The target avoids injecting every instruction, company file or remembered fact into every model request. A task can discover relevant skills, retrieve appropriate reference material, and request additional context as the problem develops.
