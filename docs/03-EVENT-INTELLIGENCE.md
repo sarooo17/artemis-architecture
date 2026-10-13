@@ -22,6 +22,14 @@ Conceptually:
 
 An external event is data, not a command. Even a valid event match does not grant permission to perform an action.
 
+## Deterministic temporal evaluation, with bounded semantics when needed
+
+The separately published EI project is **deterministic-first**: it can evaluate structural and temporal patterns without continuously calling a model. A bounded semantic evaluator can be used selectively when a condition cannot be represented adequately by structural data. This is different from turning all incoming events into a prompt.
+
+The public EI implementation also supports the distinction between **conditions as durable facts** and **activations that wake a particular host-owned continuation**. Not every meaningful condition needs to launch an agent. Some conditions can be composed into higher-level, derived events without waking a task at all.
+
+EI is **embedded and host-owned**: the host retains responsibility for connected event sources, authorization, continuation identity and delivery. The host can use a durable target other than a conversation; Artemis's exact Execution-centered wake contract is a vNext direction.
+
 ## Beyond simple triggers
 
 The interesting problems are temporal and relational: ordered events, absence, repeated events, bounded windows, correlations between sources, or higher-level conditions inferred from simpler facts.
@@ -38,7 +46,7 @@ This involves multiple future facts, a deadline, and a continuation that can hav
 
 Event Intelligence evaluates *when a condition is met*. Artemis owns *what business work the condition should resume*. The event layer should not silently create authority, overwrite task state, or force every waiting task into a new conversation.
 
-A key vNext direction is to resume the **exact waiting Execution**, not to indiscriminately wake its entire parent/child tree.
+A key vNext direction is to resume the **exact waiting Execution**, not to indiscriminately wake its entire parent/child tree. A parent should resume only when its declared dependency or join condition is met. **Launching new work from an automation** and **resuming already-waiting work** are separate semantics.
 
 ## Independent public project
 
