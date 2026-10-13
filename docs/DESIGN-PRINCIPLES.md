@@ -10,6 +10,7 @@ This page is a short map of the ideas emphasized across the public notes. None i
 | Work is durable and independent of UI | Tasks may continue, wait and complete after the initiating message | [Execution](01-WORK-AS-THE-PRIMITIVE.md) |
 | Task-shaped, adaptable environments | Assemble the context, capability and compute appropriate to an assignment, with bounded escalation | [Environment](17-ADAPTIVE-ENVIRONMENTS.md) |
 | Cross-system semantic world | Express business meaning independent from any one tool API or ERP module | [World](18-SEMANTIC-WORLD.md) |
+| Categorized capabilities and provider adapters | Domain-aware semantic operations can be backed by different systems through validated provider mappings | [Adapters](19-CAPABILITY-TAXONOMY-AND-ADAPTERS.md) |
 | Compact capability access | Relevant permitted operations can be discovered without loading a giant tool catalog | [Capabilities](02-CAPABILITY-FABRIC.md) |
 | Event Intelligence | Future conditions wake dormant work without endless model polling | [Events](03-EVENT-INTELLIGENCE.md) |
 | Runtime-owned continuation | Known actions, compute, reasoning, waits and verification are distinct | [Continuation](04-CONTINUATION.md) |
