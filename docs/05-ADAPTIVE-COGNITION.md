@@ -21,7 +21,7 @@ Artemis explores a division of responsibility among:
 - General reasoning models for unfamiliar situations, planning, synthesis, and recovery.
 - Controlled computational environments when an outcome is better calculated or tested than guessed.
 
-The runtime, not a model's self-assertion, determines whether an operation can gain more context, tools, resources, or authority. It can adapt the type of compute without treating a stronger model as the fix for every failure.
+The runtime, not a model's self-assertion, validates proposed changes to context, capabilities and compute resources. **Authority is different:** a stronger model, higher confidence or missing capability cannot create permissions. Any new action scope still needs appropriate delegation, policy and, where required, human approval. Cognitive adaptation cannot bypass these boundaries.
 
 ## The more interesting part: knowing what is missing
 
