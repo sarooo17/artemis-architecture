@@ -51,22 +51,26 @@ These are design choices, not claims that Artemis invented the underlying concep
 
 ```mermaid
 flowchart TB
-  U["User intent"] --> X["Conversation & work surfaces"]
-  X --> E["Durable work / Execution"]
-  E --> C["Task-scoped environment"]
-  C --> R["Reasoning & bounded decisions"]
-  C --> K["Compact capability surface"]
-  K --> W["Business systems & tools"]
-  E --> T["Event Intelligence / future conditions"]
-  T -. "resume when matched" .-> E
-  W --> V["Evidence & verification"]
-  R --> V
+  U["User intent"] --> FD["Front Desk & global conversation"]
+  FD --> UI["Work Surfaces & attention"]
+  FD --> E["Durable Execution"]
+  E --> ENV["Task-scoped context & resources"]
+  ENV --> C["Adaptive compute & reasoning"]
+  E --> CAP["Semantic capabilities"]
+  CAP --> P["Authority & policy boundary"]
+  UI --> DA["Governed direct action"]
+  DA --> P
+  P --> SYS["Connected business systems"]
+  SYS --> V["Evidence & verification"]
+  C --> E
   V --> E
-  E --> O["Artifacts, outcomes & attention"]
-  O --> X
+  E --> EI["Event Intelligence"]
+  EI -. "resume relevant work" .-> E
+  E --> O["Outcomes & artifacts"]
+  O --> UI
 ```
 
-*Conceptual illustration, not an implementation topology.*
+*Conceptual vNext design, not current deployment topology. Software actions do not always need autonomous Executions, but they still cross the relevant authorization boundary.*
 
 ## Read the design notes
 
