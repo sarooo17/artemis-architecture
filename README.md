@@ -91,7 +91,8 @@ Start with **[The architectural signatures](docs/DESIGN-PRINCIPLES.md)** for the
 17. **[Concurrent work and attention](docs/16-MULTI-EXECUTION-ATTENTION.md)** — multiple Executions and a global place for approvals, results and blockers.
 18. **[Adaptive environments](docs/17-ADAPTIVE-ENVIRONMENTS.md)** — assemble context, capabilities and resources per assignment and handle gaps at their own layer.
 19. **[Semantic world and cross-system work](docs/18-SEMANTIC-WORLD.md)** — business intent over heterogeneous providers, with current systems remaining authoritative.
-20. **[Status and disclosure scope](docs/STATUS.md)** — what is implemented, what is a target, and what stays private.
+20. **[Capability taxonomy and ERP adapters](docs/19-CAPABILITY-TAXONOMY-AND-ADAPTERS.md)** — domain categories, operation kinds, modular packs, federated access and the limits of provider interchangeability.
+21. **[Status and disclosure scope](docs/STATUS.md)** — what is implemented, what is a target, and what stays private.
 
 ## What Artemis is not
 
