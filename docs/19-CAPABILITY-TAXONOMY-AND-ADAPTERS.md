@@ -71,7 +71,7 @@ This separation also matters beyond ERP: a runtime should be able to evolve an i
 
 **That is an architectural objective, not a currently guaranteed one-click capability.**
 
-Artemis has an ERP provider abstraction and a typed read-oriented adapter foundation, with ERPNext as the present concrete ERP-backed environment. The existing canonical ERP mappings still contain ERPNext-specific assumptions. Adding another ERP would require a real provider adapter and validation that equivalent business operations can be represented correctly.
+Artemis has an ERP provider abstraction and a **thin, typed read-oriented adapter** foundation, with ERPNext as the present concrete ERP-backed environment. The adapter currently formalizes an interface over an existing data provider; it does not mean every curated operation is executed through an interchangeable adapter. The existing canonical ERP mappings still contain ERPNext-specific assumptions. Adding another ERP would require a real provider adapter and validation that equivalent business operations can be represented correctly.
 
 A credible adapter needs to reconcile, where relevant:
 
@@ -93,7 +93,7 @@ A single semantic catalog can conceptually combine capabilities implemented insi
 
 The model-facing surface stays compact. Discovery returns what is relevant and permitted; execution still passes the appropriate policy and authority boundaries.
 
-An available connection does not imply an all-access agent. A capability found in metadata is not necessarily executable. Read support does not imply write support.
+An available connection does not imply an all-access agent. A capability found in metadata is not necessarily executable. The existing ERP-backed execution path is primarily read-oriented. Describing a write operation or providing a draft facility does not mean that final writes are enabled. Read support does not imply write support.
 
 This is why **provider flexibility, capability discoverability and authorization are separate concerns**.
 
