@@ -19,17 +19,18 @@ This supports modular capability packs and a federated semantic catalog. The und
 See [Capability taxonomy and provider adapters](19-CAPABILITY-TAXONOMY-AND-ADAPTERS.md) for the full conceptual explanation.
 
 
+## Compact model-facing surface, rich internal catalog
 
-The architectural pattern is a **small public-facing interaction surface** backed by a richer capability fabric:
+The architectural pattern is a **small model-facing interaction surface** backed by a richer capability fabric:
 
 - **Discover:** find candidate operations relevant to a goal.
 - **Inspect:** obtain the description and constraints needed for a candidate.
 - **Invoke:** request a permitted operation with structured input.
 - **Retrieve:** obtain the result or an appropriate reference to it.
 
-These are conceptual functions, **not a promise of a public API**.
+These are conceptual functions, **not a promise of a public API or a public-facing MCP connector**. They describe how agents can interact with the capability layer without preloading every underlying operation.
 
-The model does not need every business schema in its initial context. Nor does discovering an operation imply permission to execute it.
+The model does not need every business schema in its initial context. Capability discovery can interpret the **goal and required data** before selecting a small, useful bundle of operations, rather than relying only on tool-name matching. Nor does discovering an operation imply permission to execute it.
 
 ## Capability access is contextual
 
@@ -43,7 +44,7 @@ The design separates:
 4. **Execution:** where and how it is actually performed.
 5. **Evidence:** what the operation returned and what can be concluded from it.
 
-The authorization boundary matters at both discovery and invocation. A capability that cannot be used must not become authorized merely because it was found or described.
+The target requires relevant authorization boundaries at **discovery/projection and invocation**. Finding or describing a capability cannot authorize its execution. This is an architectural invariant; it should not be read as a blanket guarantee that every production integration has already completed all related conformance work.
 
 ## Why this matters beyond token cost
 
@@ -55,4 +56,4 @@ It also creates a trade-off: discovery can be incomplete or ambiguous. The runti
 
 This note deliberately omits registry internals, ranking mechanics, access-control matrices, provider-specific adapters, tool schemas, and production limits.
 
-**Status:** Artemis already has capability abstraction and compact discovery/execution foundations. The target model refines how capability access is assembled per assignment. [Status](STATUS.md).
+**Status:** Artemis already has capability abstraction and compact discovery/execution foundations, particularly for governed ERP reads. The target model refines how capability access is assembled per assignment. Existing write contracts do **not** imply live ERP mutation support. [Status](STATUS.md).
