@@ -10,7 +10,15 @@ Artemis treats a **capability** as a semantic operation: something meaningful th
 
 The underlying provider and protocol may change while the semantic operation remains recognizable to the system.
 
-## Compact outside, rich inside
+## Structured categories, not a flat tool list
+
+Capabilities are also organized across several independent dimensions: **functional domain** (such as purchasing, finance or workspace), **operation kind** (search, read, prepare, write or verify), **risk**, **where they are exposed**, and **which provider executes them**.
+
+This supports modular capability packs and a federated semantic catalog. The underlying business provider may vary while the user-facing operation retains its meaning when an appropriate adapter exists. The architecture already includes a typed ERP provider abstraction, but a different ERP still needs correct entity mappings, operational semantics, permission handling and validation: **multi-ERP switching is an architectural direction, not a proven one-click feature**.
+
+See [Capability taxonomy and provider adapters](19-CAPABILITY-TAXONOMY-AND-ADAPTERS.md) for the full conceptual explanation.
+
+
 
 The architectural pattern is a **small public-facing interaction surface** backed by a richer capability fabric:
 
