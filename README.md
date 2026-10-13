@@ -17,6 +17,17 @@ This repository is a **public technical reading room**, not the Artemis source c
 
 **Project stage:** active development. Some principles already have implementations or prototypes; the more ambitious unified architecture is an accepted design direction under incremental development. See [Architecture status](docs/STATUS.md). Nothing in these notes guarantees that a described capability is live in the product.
 
+## Start here
+
+Before diving into technical details, these notes explain the product thesis and how to evaluate it:
+
+- **[Why Artemis Exists](docs/WHY-ARTEMIS-EXISTS.md)** — what is missing between user intent and verifiable business outcomes.
+- **[Architectural Trade-offs](docs/ARCHITECTURAL-TRADEOFFS.md)** — where the design diverges from chat-centric assistants, fixed workflows and static tool catalogs, including the costs of those choices.
+- **[Guided Demo](docs/GUIDED-DEMO.md)** — three evaluation themes tied to the [interactive preview](https://demo.underlay.studio), without treating vNext concepts as already shipped.
+- **[Evidence & Limitations](docs/EVIDENCE-AND-LIMITATIONS.md)** — which claims are grounded in implemented foundations, demonstrations or design targets.
+
+Named competitor comparisons and performance rankings are intentionally omitted until common scenarios have been measured with reproducible evidence.
+
 ## The architectural shift
 
 | Common agent assumption | Artemis design direction |
