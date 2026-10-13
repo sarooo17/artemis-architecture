@@ -9,6 +9,10 @@ Most agent demonstrations end when the model responds. Business work often does 
 
 > **Intent in. Interface out. Action done.**
 
+**Explore Artemis:** [Live demo](https://demo.underlay.studio) · [Underlay website](https://underlay.studio) · [Engineering memos](https://memos.underlay.studio)
+
+The demo is an interactive preview of Artemis's current product experience. The architecture notes in this repository also discuss vNext designs that may not yet be available in the demo.
+
 This repository is a **public technical reading room**, not the Artemis source code, SDK, deployment guide, or complete engineering specification. It explains selected architectural ideas, the tensions behind them, and the boundaries they are meant to preserve.
 
 **Project stage:** active development. Some principles already have implementations or prototypes; the more ambitious unified architecture is an accepted design direction under incremental development. See [Architecture status](docs/STATUS.md). Nothing in these notes guarantees that a described capability is live in the product.
